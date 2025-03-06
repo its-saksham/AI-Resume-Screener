@@ -11,9 +11,9 @@ This project automates resume screening using NLP and machine learning. It extra
 - Flask (for API)  
 
 ## 📂 Folder Structure  
-**📦 AI_Resume_Screener**
-    ┣ 📂 src/ # Main code files 
-    ┣ 📂 data/ # Sample dataset 
-    ┣ 📂 models/ # Trained models 
-    ┣ 📜 requirements.txt # Dependencies 
-    ┣ 📜 README.md # Project details
+**📦 AI_Resume_Screener**<br>
+    ┣ 📂 src/ # Main code files<br> 
+    ┣ 📂 data/ # Sample dataset <br>
+    ┣ 📂 models/ # Trained models <br>
+    ┣ 📜 requirements.txt # Dependencies<br> 
+    ┣ 📜 README.md # Project details<br>
