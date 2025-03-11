@@ -30,11 +30,17 @@ def upload_resume():
     file.save(file_path)
     
     # Parse resume
+    # Parse resume
     parsed_result = parse_resume(file_path)
-    if parsed_result is None:
+
+    if parsed_result is None or not isinstance(parsed_result, tuple) or len(parsed_result) != 3:
         return jsonify({"error": "Failed to parse resume"}), 500
 
-    text, extracted_skills = parsed_result
+    text, extracted_skills, extracted_education = parsed_result
+
+    if not isinstance(extracted_skills, list) or len(extracted_skills) == 0:
+        return jsonify({"error": "Skill extraction failed: No skills found"}), 500
+
 
     # Define required job skills (can be dynamic)
     job_skills = ["Flask", "AWS", "Python", "SQL"]
